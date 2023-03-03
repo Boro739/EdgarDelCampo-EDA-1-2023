@@ -76,7 +76,7 @@ void Torre(){
     for(int k=0;k<8;k++){
         for(int t=0;t<8;t++)
             tablero[k][t]=0;
-        }
+    }
     
     printf("Ingrese las coordenadas (x,y) de la pieza Torre en una matriz de 8x8");
     printf("\nCoordenada x: ");
@@ -84,18 +84,22 @@ void Torre(){
     printf("\nCoordenada y: ");
     scanf("%i",&y);
 
-        for (int i=x-1, j=y-1; (i<x||j>=0); i++, j--)
-        tablero[i][j]=1;
+    for (int j = 0; j < 8; j++)//columnas
+    {
+        for (int k = 0; k < 8; k++)//renglones
+        {
+            
+                if(y==j+1||x==k+1)
+                    tablero[k][j]=1;
+                        else
+                        tablero[k][j]=0;
+                        
+        
 
-    for (int i=x-1, j=y-1; (i>=x||j<8); i--, j++)
-        tablero[i][j]=1;
+        }
 
-    for (int i=x-1, j=y-1; (i<8||j<y); i++, j++)
-        tablero[i][j]=1;
 
-    for (int i=x-1, j=y-1; (i>=0||j>=y); i--, j--)
-        tablero[i][j]=1;
-
+    }
     tablero[x-1][y-1]=2;
 
     for(int t=0;t<8;t++){   //columnas
@@ -109,19 +113,6 @@ void Torre(){
         }
         printf("\n");
     }
-    /*for (int k = 0; k < 8; k++)//columnas
-    {
-        for (int j = 0; j < 8; j++)//renglones
-        {
-            if(y==tablero[k][j] && x==j+1 )
-                
-                printf("|T");
-                else if(y==k+1||x==j+1)
-                    printf("|X");
-                        else
-                        printf("|_");
-        }
-        printf("\n");
 
-    }*/
+
 }
