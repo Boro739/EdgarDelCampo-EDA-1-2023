@@ -63,7 +63,7 @@ void Reina(int *q[]){
     for(int t=0;t<8;t++){   //columnas
         for(int k=0;k<8;k++){       //renglones
             if(q[k][t]==2)
-                printf("|A");
+                printf("|Q");
             if(q[k][t]==1)
                 printf("|X");
             if(q[k][t]==0)
