@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #define TAM 8
 
 struct piezas{
@@ -27,9 +26,12 @@ int main(){
 
         printf("\n\t*** MOVIMIENTOS VALIDOS EN PIEZAS DE AJEDREZ ***\n");
         printf("¿Qué desea realizar?\n");
-        printf("1) Reina.\n");
-        printf("2) Rey.\n");
-        printf("3) Salir.\n\n");
+        printf("1) Caballo.\n");
+        printf("2) Alfil.\n");
+        printf("3) Torre.\n");
+        printf("4) Reina.\n");
+        printf("5) Rey.\n");
+        printf("6) Salir.\n\n");
         scanf("%d", &opcion);
         switch(opcion){
             case 1:Caballo();break;
@@ -47,7 +49,7 @@ int main(){
 //Funcion Caballo
 void Caballo(){
     
-    printf("Ingrese las coordenadas (x,y) de la pieza Alfil en una matriz de 8x8");
+    printf("Ingrese las coordenadas (x,y) de la pieza Caballo en una matriz de 8x8");
     printf("\nCoordenada x: ");
     scanf("%i",&P.x);
     printf("\nCoordenada y: ");
@@ -199,7 +201,7 @@ void Reina(int *q[]){
 //Funcion Rey
 void Rey(){
 
-    printf("Ingrese las coordenadas (x,y) de la pieza Reina en una matriz de 8x8");
+    printf("Ingrese las coordenadas (x,y) de la pieza Rey en una matriz de 8x8");
     printf("\nCoordenada x: ");
     scanf("%i",&P.x);
     printf("\nCoordenada y: ");

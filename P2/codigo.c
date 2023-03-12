@@ -76,7 +76,7 @@ void Reina(int *q[]){
 void Rey(int *q[]){
      int x,y;
 
-    printf("Ingrese las coordenadas (x,y) de la pieza Reina en una matriz de 8x8");
+    printf("Ingrese las coordenadas (x,y) de la pieza Rey en una matriz de 8x8");
     printf("\nCoordenada x: ");
     scanf("%i",&x);
     printf("\nCoordenada y: ");
